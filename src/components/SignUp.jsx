@@ -86,34 +86,41 @@ const FaceBook = () => {
         <div className='main-div'>
           <div className='container'>
             <div className='card'>
+            
               <form onSubmit={submitForm}>
                 <div>
                   <h2>Create a new account</h2>
                   <p>it's quick and easy</p>
                 </div>
                 <hr className='hr' />
+                <table>
 
                 <div className='input-box'>
-                 
-                 <input value={userFName} onChange={FNamehandler} type='text' placeholder='First Name' />
+                  <tr>
+                    <td>
+                <input value={userFName} onChange={FNamehandler} type='text' placeholder='First Name' />
                   {showFnameError && <p className={` ${ msgFName ==="Looks Good! ✔" ? "grencol"  : "EroorColor"}`}>{msgFName}</p>}
-
-
+                  </td>
+                  <td>
                   <input value={userLName} onChange={LNamehandler} type='text' placeholder='Surname' />
                   {showLnameError && <p className={` ${ msgLName ==="Looks Good! ✔" ? "grencol"  : "EroorColor"}`}>{msgLName} </p>}
-                 
+                  </td>
+                  </tr>
                 </div>
 
                 <div className='input-box'>
+                  <tr> <td>
                   <input value={userEmail} onChange={Emailhandler} className='input-2' type='text' placeholder='Mobile Number Or Email Address' />
                   {showEmailError && <p className={` ${ msgEmail ==="Looks Good! ✔" ? "grencol"  : "EroorColor"}`}>{msgEmail}</p>}
-                
+                  </td></tr>
                 </div>
                 <div className='input-box'>
+                  <tr><td>
                   <input value={userPassword} onChange={Passwordhandler} className='input-2' type='password' placeholder='New password' />
                   {showPasswordError && <p className={` ${ msgPasswoed ==="Looks Good! ✔" ? "grencol"  : "EroorColor"}`}>{msgPasswoed}</p>}
-                
+                  </td></tr>
                 </div>
+                </table>
                 <div className='text-2'>
                   <p>People who use our service may have uploaded your Contact information to<br />Facebook.
                     <a href='#'>Learn more.</a><br /></p>
